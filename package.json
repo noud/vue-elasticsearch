@@ -63,8 +63,10 @@
     "webpack-merge": "^1.1.2"
   },
   "dependencies": {
-    "elasticsearch": "^13.3.1",
-    "lodash": "^4.17.4"
+    "@elastic/elasticsearch": "^7.7.1",
+    "elasticsearch": "^16.7.1",
+    "lodash": "^4.17.4",
+    "vue": "^2.6.11"
   },
   "peerDependencies": {
     "vue": "^2.5.0"
