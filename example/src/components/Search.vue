@@ -1,8 +1,8 @@
 <template>
   <div class="search">
 
-    <img src="../assets/it2g.png" alt="miro" class="miroImg">
-    <h1>Add Visual Search to Your App or Project in <u>Minutes</u></h1>
+    <img src="../assets/elastic-logo.svg" alt="elastic" class="logoImg">
+    <h1>Enterprise Search</h1>
 
     <!-- Customize autocomplete input using inputClass binding, `input-box-header` and  `input-box-footer` slot templates -->
     <!-- Customize suggestion item using suggestionClass binding and `suggestion` slot template -->
