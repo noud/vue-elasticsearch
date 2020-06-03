@@ -45,7 +45,7 @@
                 :key="key"
                 class="result-hit-item"
                 @click="onHitClick(hit)">
-                <img :src="`https://demoimg.miro.io/120_${hit._source.resource_id}.jpg`" alt="" class="result-hit-thumb">
+                <img :src="`http://localhost:8000/image/${hit._id}.jpg`" alt="" class="result-hit-thumb"> // @todo ${hit._source.resource_id}
               </b-col>
             </b-row>
           </b-container>
@@ -127,16 +127,10 @@ export default {
     this.updatePageSize(10)
     this.updateQueryType('match')
     this.updateQueryAggs({
-      places: {
-        terms: {
-          field: 'places',
-          size: 0
-        }
-      },
-      keywords: {
+      keyword: {
         terms: {
           field: 'keywords',
-          size: 0
+          size: 10
         }
       }
     })

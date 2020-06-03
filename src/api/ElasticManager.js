@@ -21,6 +21,7 @@ export class ElasticManager {
       return Promise.reject(new Error('Search client is not configured'))
     }
 
+    // @todo
     return this.client
       .suggest({
         index: this.index,
@@ -28,7 +29,7 @@ export class ElasticManager {
           keywordSuggester: {
             prefix: query,
             completion: {
-              field: 'text',
+              field: '1234',  // @todo text
             },
           },
         },
@@ -60,9 +61,10 @@ export class ElasticManager {
 
     let query = {}
     if (searchOptions.queryType === 'terms') {
-      query.terms = { keywords: [keyword] }
+      query.terms = { keywords: [keyword] }  // @todo { keyword: [keyword] }
     } else if (searchOptions.queryType === 'match') {
-      query.match = { keywords: keyword }
+      // console.log('keyword', keyword);
+      query.match = { keywords: keyword }  // @todo { keyword: keyword }
     }
 
     const params = {
