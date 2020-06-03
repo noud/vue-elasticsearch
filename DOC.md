@@ -14,7 +14,7 @@ Vue.use(VueElastic, {
     type: 'suggestions'             // Type
   },
   search: {
-    host: 'http://localhost:9200',  // Host that provides suggestions
+    host: 'http://localhost:9200',  // Host that provides search results
     index: 'test',                  // Index
     type: 'tags'                    // Type
   }
