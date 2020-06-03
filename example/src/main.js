@@ -16,12 +16,12 @@ import router from './router'
 Vue.use(BootstrapVue)
 Vue.use(VueElastic, {
   suggest: {
-    host: 'https://search-eschr-tyiqhwx3brb5tglcxbocehuvda.eu-west-1.es.amazonaws.com',
+    host: 'http://localhost:8000',  // @todo localhost symfony transformer
     index: 'test',
     type: 'suggestions'
   },
   search: {
-    host: 'https://search-eschr-demo-kokjqkr3h4rrpfcwbrqzdrdhbu.ap-southeast-1.es.amazonaws.com',
+    host: 'http://localhost:9200',  // @todo direct es connection, test localhost=elasticsearch
     index: 'test',
     type: 'tags'
   }
